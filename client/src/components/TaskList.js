@@ -4,7 +4,7 @@ import axios from 'axios';
 const TasksList = props => {
 
   useEffect(() => {
-    axios.get('/api/v1/tasks.json')
+    axios.get('/tasks.json')
         .then(res => setTasks(res.data))
       }, [])
 
