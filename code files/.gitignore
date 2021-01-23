@@ -34,3 +34,6 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# ignore node modules so i don't upload so many files?
+/node_modules
