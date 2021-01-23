@@ -1,0 +1,39 @@
+<%= form_with model: task do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% task.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %><br>
+  </div>
+
+<%# At some point, you should change this to a check box select %>
+  <div>
+    <%= form.label :deadline %><br>
+    <%= form.date_field :deadline %>
+  </div>
+
+  <div>
+    <%= form.label :category %><br>
+    <%= form.text_field :category %><br>
+  </div>
+
+  <div>
+    <%= form.label :importance %><br>
+    <%= form.text_area :importance %><br>
+  </div>
+
+  <div>
+    <%= form.label :collaborators %><br>
+    <%= form.text_area :collaborators %><br>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<h1><%=@task.title %></h1>
+<p><%=@task.category %> || <%=@task.importance %></p>
+<hr>
+<p>Deadline: <%=@task.deadline.strftime('%A %d %b %Y')%></p> 
+<p><%=@task.description%></p>
+<p><strong>Collaborators: </strong><%=@task.collaborators%></p>
+
+<p>Created at: <%=@task.created_at %> || Updated at: <%=@task.updated_at %></p>
+<hr>
+
+<ul>
+  <li><%= link_to "Edit Task", edit_task_path(@task) %></li>
+  <li><%= link_to "Delete Task", task_path(@task),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+                  <br/>
+  <li><%= link_to "Return to list", root_path %> </li>
+</ul>

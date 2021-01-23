@@ -1,0 +1,19 @@
+<h1>To-do List</h1>
+<p>Find me in app/views/tasks/index.html.erb</p>
+
+<p>title:string description:text <br/> 
+category:string importance:string <br/> 
+deadline:date collaborators:text </p>
+
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <a href="<%= task_path(task) %>">
+        <%= task.title %> || <%=task.category %> || <%=task.importance %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Task", new_task_path %>
