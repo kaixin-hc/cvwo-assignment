@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import TaskList from '/Users/hannahchiakaixin/todo-app/client/src/components/TaskList.js';
+import TaskList from './components/TaskList.js';
 
 function App() {
 
