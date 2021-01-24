@@ -2034,3 +2034,501 @@ Processing by Api::V1::TasksController#index as HTML
 Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.0ms | Allocations: 1633)
 
 
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:33:24 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (3.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 212ms (Views: 205.9ms | ActiveRecord: 99.2ms | Allocations: 4766)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:41:17 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (2.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 92ms (Views: 81.6ms | ActiveRecord: 34.7ms | Allocations: 8506)
+
+
+Started POST "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:41:46 +0800
+Processing by Api::V1::TasksController#create as HTML
+  Parameters: {"task"=>{"title"=>"Done with React!", "category"=>"Admin", "importance"=>"OTOT", "description"=>"Cool, new task!"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1626)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/api/v1/tasks_controller.rb:25:in `create'
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:41:52 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 1.0ms | Allocations: 1772)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:41:59 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (12.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 53ms (Views: 39.9ms | ActiveRecord: 12.4ms | Allocations: 1613)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:42:18 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 1.0ms | Allocations: 1613)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:43:37 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (6.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 11.0ms | ActiveRecord: 6.9ms | Allocations: 1613)
+
+
+Started POST "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:44:02 +0800
+Processing by Api::V1::TasksController#create as HTML
+  Parameters: {"task"=>{"title"=>"Pleasemy crops", "category"=>"smth", "importance"=>"OTOT", "description"=>"oh my"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1567)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/api/v1/tasks_controller.rb:25:in `create'
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:44:06 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.4ms | Allocations: 1614)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:44:13 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (6.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 6.7ms | Allocations: 1613)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:45:41 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.9ms | Allocations: 1613)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:48:52 +0800
+  [1m[35m (17.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (15.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 111ms (Views: 50.7ms | ActiveRecord: 51.7ms | Allocations: 7140)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:48:55 +0800
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:48:55 +0800
+Processing by Api::V1::TasksController#index as HTML
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (3.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 3.6ms | Allocations: 2309)
+
+
+  [1m[36mTask Load (2.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 96ms (Views: 61.7ms | ActiveRecord: 34.2ms | Allocations: 6465)
+
+
+Started POST "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:49:08 +0800
+Processing by Api::V1::TasksController#create as HTML
+  Parameters: {"task"=>{"title"=>"Test", "category"=>"Some Cat", "importance"=>"OTOT", "description"=>"djkfd"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1626)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/api/v1/tasks_controller.rb:25:in `create'
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:49:15 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (5.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 5.7ms | Allocations: 1792)
+
+
+Started POST "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:53:17 +0800
+Processing by Api::V1::TasksController#create as HTML
+  Parameters: {"task"=>{"title"=>"More", "category"=>"and", "importance"=>"More", "description"=>"and"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1580)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/api/v1/tasks_controller.rb:25:in `create'
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:53:21 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.1ms | Allocations: 1614)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 17:53:30 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 1.3ms | Allocations: 1613)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 18:02:01 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (3.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 300ms (Views: 255.6ms | ActiveRecord: 151.9ms | Allocations: 8564)
+
+
+Started POST "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 18:02:10 +0800
+Processing by Api::V1::TasksController#create as HTML
+  Parameters: {"task"=>{"title"=>"I hope", "category"=>"PLEASE", "importance"=>"OTOT", "description"=>"dsfjkds"}}
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+  [1m[36mTask Create (42.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "category", "importance", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "I hope"], ["description", "dsfjkds"], ["category", "PLEASE"], ["importance", "OTOT"], ["created_at", "2021-01-24 10:02:10.797595"], ["updated_at", "2021-01-24 10:02:10.797595"]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+Completed 201 Created in 59ms (Views: 0.4ms | ActiveRecord: 47.9ms | Allocations: 2480)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 18:02:15 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (35.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 89ms (Views: 52.8ms | ActiveRecord: 35.6ms | Allocations: 1746)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 18:08:07 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 21.3ms | Allocations: 8510)
+
+
+Started POST "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 18:08:25 +0800
+Processing by Api::V1::TasksController#create as HTML
+  Parameters: {"task"=>{"title"=>"Another one?", "category"=>"Project A", "importance"=>"Urgent", "description"=>"Idk, just some text"}}
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+  [1m[36mTask Create (13.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "category", "importance", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Another one?"], ["description", "Idk, just some text"], ["category", "Project A"], ["importance", "Urgent"], ["created_at", "2021-01-24 10:08:25.298267"], ["updated_at", "2021-01-24 10:08:25.298267"]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+Completed 201 Created in 41ms (Views: 0.3ms | ActiveRecord: 17.3ms | Allocations: 2392)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 18:08:28 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 1.8ms | Allocations: 1856)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 18:08:33 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (47.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 97ms (Views: 49.2ms | ActiveRecord: 47.1ms | Allocations: 1855)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:36:41 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (19.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 208ms (Views: 170.5ms | ActiveRecord: 80.7ms | Allocations: 8677)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:41:10 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (2.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 21.6ms | ActiveRecord: 2.5ms | Allocations: 1856)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:42:16 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (3.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 3.1ms | Allocations: 1855)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:42:49 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (2.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 2.5ms | Allocations: 1855)
+
+
+Started POST "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:43:00 +0800
+Processing by Api::V1::TasksController#create as HTML
+  Parameters: {"task"=>{"title"=>"Some ", "category"=>"Body", "importance"=>"Important", "description"=>""}}
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+  [1m[36mTask Create (4.1ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "category", "importance", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Some "], ["description", ""], ["category", "Body"], ["importance", "Important"], ["created_at", "2021-01-24 12:43:00.608204"], ["updated_at", "2021-01-24 12:43:00.608204"]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+Completed 201 Created in 31ms (Views: 1.3ms | ActiveRecord: 14.6ms | Allocations: 2387)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:43:04 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (4.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 4.2ms | Allocations: 1976)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:43:39 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (2.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 2.4ms | Allocations: 1976)
+
+
+Started POST "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:43:56 +0800
+Processing by Api::V1::TasksController#create as HTML
+  Parameters: {"task"=>{"title"=>"Try again", "category"=>"Cool", "importance"=>"OTOT", "description"=>"Default description"}}
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+  [1m[36mTask Create (5.9ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "category", "importance", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Try again"], ["description", "Default description"], ["category", "Cool"], ["importance", "OTOT"], ["created_at", "2021-01-24 12:43:56.892568"], ["updated_at", "2021-01-24 12:43:56.892568"]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:21:in `create'
+Completed 201 Created in 24ms (Views: 0.4ms | ActiveRecord: 13.6ms | Allocations: 2376)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:44:00 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.2ms | Allocations: 2097)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:45:07 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (14.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 35ms (Views: 20.6ms | ActiveRecord: 14.5ms | Allocations: 2097)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:45:51 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (4.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 59ms (Views: 53.8ms | ActiveRecord: 4.8ms | Allocations: 2097)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:51:02 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (2.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 2.1ms | Allocations: 2097)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:51:26 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (18.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 30ms (Views: 11.1ms | ActiveRecord: 18.5ms | Allocations: 2097)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:51:30 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.5ms | Allocations: 2097)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:52:05 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.0ms | Allocations: 2097)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 20:52:23 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (9.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 9.1ms | Allocations: 2097)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:18:13 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (5.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 189ms (Views: 184.8ms | ActiveRecord: 59.1ms | Allocations: 5257)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:18:33 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 1.8ms | Allocations: 2098)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:18:58 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 1.1ms | Allocations: 2101)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:19:38 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.9ms | Allocations: 2097)
+
+
+Started DELETE "/api/v1/tasks/10" for 127.0.0.1 at 2021-01-24 21:19:40 +0800
+Processing by Api::V1::TasksController#destroy as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTask Load (10.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:47:in `destroy'
+  [1m[36mTask Destroy (15.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:47:in `destroy'
+No template found for Api::V1::TasksController#destroy, rendering head :no_content
+Completed 204 No Content in 117ms (ActiveRecord: 42.5ms | Allocations: 6240)
+
+
+Started DELETE "/api/v1/tasks/11" for 127.0.0.1 at 2021-01-24 21:19:41 +0800
+Processing by Api::V1::TasksController#destroy as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:47:in `destroy'
+  [1m[36mTask Destroy (3.0ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:47:in `destroy'
+No template found for Api::V1::TasksController#destroy, rendering head :no_content
+Completed 204 No Content in 18ms (ActiveRecord: 10.3ms | Allocations: 2497)
+
+
+Started DELETE "/api/v1/tasks/8" for 127.0.0.1 at 2021-01-24 21:19:43 +0800
+Processing by Api::V1::TasksController#destroy as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:47:in `destroy'
+  [1m[36mTask Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:47:in `destroy'
+No template found for Api::V1::TasksController#destroy, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 8.5ms | Allocations: 2497)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:19:47 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (20.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 48ms (Views: 26.8ms | ActiveRecord: 20.5ms | Allocations: 1734)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:19:53 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (3.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 3.5ms | Allocations: 1734)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:28:44 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 162ms (Views: 140.1ms | ActiveRecord: 56.5ms | Allocations: 8684)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:33:40 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (3.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 3.3ms | Allocations: 1734)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:33:58 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (50.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 120ms (Views: 69.5ms | ActiveRecord: 50.1ms | Allocations: 1734)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:34:05 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 1.7ms | Allocations: 1734)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:35:42 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 1.7ms | Allocations: 1734)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:37:36 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (4.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 4.5ms | Allocations: 1734)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:37:50 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (4.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 4.1ms | Allocations: 1734)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-24 21:38:13 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.9ms | Allocations: 1734)
+
+
+Started PATCH "/api/v1/tasks/4" for 127.0.0.1 at 2021-01-24 21:38:22 +0800
+Processing by Api::V1::TasksController#update as HTML
+  Parameters: {"task"=>{"title"=>"Test Task", "category"=>"Project A", "importance"=>"Important", "description"=>"Adding a new description"}, "id"=>"4"}
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:36:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:38:in `update'
+  [1m[36mTask Update (33.8ms)[0m  [1m[33mUPDATE "tasks" SET "description" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["description", "Adding a new description"], ["updated_at", "2021-01-24 13:38:22.965597"], ["id", 4]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:38:in `update'
+  [1m[36mTRANSACTION (29.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:38:in `update'
+Completed 200 OK in 108ms (Views: 0.7ms | ActiveRecord: 66.8ms | Allocations: 3285)
+
+
+Started PATCH "/api/v1/tasks/6" for 127.0.0.1 at 2021-01-24 21:38:45 +0800
+Processing by Api::V1::TasksController#update as HTML
+  Parameters: {"task"=>{"title"=>"Frightful Title", "category"=>"Oh Dear", "importance"=>"Important", "description"=>""}, "id"=>"6"}
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:36:in `update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:38:in `update'
+  [1m[36mTask Update (2.2ms)[0m  [1m[33mUPDATE "tasks" SET "title" = $1, "category" = $2, "importance" = $3, "updated_at" = $4 WHERE "tasks"."id" = $5[0m  [["title", "Frightful Title"], ["category", "Oh Dear"], ["importance", "Important"], ["updated_at", "2021-01-24 13:38:45.697413"], ["id", 6]]
+  ↳ app/controllers/api/v1/tasks_controller.rb:38:in `update'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:38:in `update'
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 9.7ms | Allocations: 2994)
+
+
