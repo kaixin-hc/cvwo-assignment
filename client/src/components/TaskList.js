@@ -3,6 +3,8 @@ import axios from 'axios';
 import NewTaskForm from './NewTaskForm';
 import EditTaskForm from './EditTaskForm'
 import Task from './Task';
+import TaskFilter from './TaskFilter';
+import ShowAllTasks from './ShowAllTasks';
 
 const TasksList = props => {
   const initialFormState = {
@@ -17,6 +19,7 @@ const TasksList = props => {
       .then(res => setTasks(res.data))
   }, [])
 
+  // create task
   const addTask = task => {
     const qs = require('qs');
 
@@ -35,6 +38,7 @@ const TasksList = props => {
     setTasks([...tasks, task]);
   };
 
+  // delete task
   const removeTask = id => {
     axios.delete('/api/v1/tasks/' + id)
       .then(response => {
@@ -42,6 +46,8 @@ const TasksList = props => {
       })
       .catch(error => console.log(error))
   };
+
+  // update task
   const [editing, setEditing] = useState(false);
   const [currentTask, setCurrentTask] = useState(initialFormState);
   const editTask = task => {
@@ -57,22 +63,40 @@ const TasksList = props => {
 
   const updateTask = (updatedTask) => {
     setEditing(false);
-  
+
     const qs = require('qs');
     axios.patch('/api/v1/tasks/' + updatedTask.id, qs.stringify(
-        {
-          task:{
-            title: updatedTask.title,
-            category: updatedTask.category,
-            importance: updatedTask.importance,
-            description: updatedTask.description}
-        }))
-        .then(
-            res=>(
-                console.log(res.data)
-            ));
-  
+      {
+        task: {
+          title: updatedTask.title,
+          category: updatedTask.category,
+          importance: updatedTask.importance,
+          description: updatedTask.description
+        }
+      }))
+      .then(
+        res => (
+          console.log(res.data)
+        ));
+
     setTasks(tasks.map(task => (task.id === updatedTask.id ? updatedTask : task)))
+  };
+
+  // filtering
+  const filterTasks = (param, value) => {
+    axios.get('/api/v1/tasks/')
+      .then(response => {
+        setTasks(tasks.filter(task => task[param] == value)) 
+      })
+      .catch(error => console.log(error))
+  };
+
+  const showAll = () => {
+    axios.get('/api/v1/tasks/')
+      .then(res => {
+        setTasks(res.data) 
+      })
+      .catch(error => console.log(error))
   };
 
   const [tasks, setTasks] = useState([]);
@@ -82,21 +106,26 @@ const TasksList = props => {
       <hr />
       <div className="tasks-list">
         <div>
-        {editing ? (
+          {editing ? (
             <EditTaskForm
-                setEditing={setEditing}
-                currentTask={currentTask}
-                updateTask={updateTask}
+              setEditing={setEditing}
+              currentTask={currentTask}
+              updateTask={updateTask}
             />
           ) : (
-            <NewTaskForm addTask={addTask} initialFormState={initialFormState} />
-          )}
-          
+              <NewTaskForm addTask={addTask} initialFormState={initialFormState} />
+            )}
+
         </div>
 
         <hr />
+        <ShowAllTasks showAll={showAll} />
+        <br/>
+        <TaskFilter filterTasks={filterTasks} param="importance" value="Important"/>
+        <TaskFilter filterTasks={filterTasks} param="importance" value="Important & Urgent"/>
+        <TaskFilter filterTasks={filterTasks} param="importance" value="Urgent"/>
         {tasks.map((task, __) => (
-          <Task task={task} removeTask={removeTask} editTask ={editTask} editing = {editing} />
+          <Task task={task} removeTask={removeTask} editTask={editTask} editing={editing} />
         ))}
       </div>
     </div>

@@ -4,10 +4,9 @@ const Task = ({ task, removeTask, editTask, editing }) => {
 
     return (
         <div className="task" key={task.id}>
-
-            {task.title} |
-            {task.category} |
-            {task.importance} |
+            <span>
+            {task.title}  |  {task.category}  |  {task.importance}  |
+            </span>
 
             {editing ? (null
             ) : (
