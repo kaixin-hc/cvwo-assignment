@@ -90,7 +90,7 @@ const TasksList = props => {
       })
       .catch(error => console.log(error))
   };
-
+  
   const showAll = () => {
     axios.get('/api/v1/tasks/')
       .then(res => {

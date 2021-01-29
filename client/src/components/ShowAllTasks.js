@@ -4,7 +4,7 @@ const ShowAllTasks = (showAll) => {
 
     return (
         <button
-            onClick={() => { showAll }}
+            onClick={() => { showAll() }}
         > Show All Tasks </button>
     )
 }

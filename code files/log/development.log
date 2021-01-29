@@ -3578,3 +3578,67 @@ Processing by Api::V1::TasksController#index as HTML
 Completed 200 OK in 121ms (Views: 119.6ms | ActiveRecord: 1.4ms | Allocations: 1856)
 
 
+Started GET "/" for 127.0.0.1 at 2021-01-28 14:46:08 +0800
+  [1m[35m (9.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hannahchiakaixin/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hannahchiakaixin/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.7ms | Allocations: 337)
+Completed 200 OK in 38ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 2395)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-28 14:46:59 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (15.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 118ms (Views: 25.4ms | ActiveRecord: 88.3ms | Allocations: 7484)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-28 14:50:07 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (2.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 69ms (Views: 65.7ms | ActiveRecord: 2.4ms | Allocations: 1876)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-28 14:50:45 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (2.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 2.0ms | Allocations: 1856)
+
+
+Started GET "/api/v1/tasks/" for 127.0.0.1 at 2021-01-28 14:50:52 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 1.5ms | Allocations: 1876)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-28 14:50:58 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 1.4ms | Allocations: 1856)
+
+
+Started GET "/api/v1/tasks/" for 127.0.0.1 at 2021-01-28 14:50:59 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.7ms | Allocations: 1856)
+
+
+Started GET "/api/v1/tasks/" for 127.0.0.1 at 2021-01-28 14:51:01 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.7ms | Allocations: 1856)
+
+
+Started GET "/api/v1/tasks" for 127.0.0.1 at 2021-01-28 14:51:04 +0800
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (4.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 32ms (Views: 27.1ms | ActiveRecord: 4.0ms | Allocations: 1856)
+
+
