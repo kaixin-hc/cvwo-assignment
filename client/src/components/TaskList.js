@@ -7,6 +7,8 @@ import TaskFilter from './TaskFilter';
 import ShowAllTasks from './ShowAllTasks';
 import Search from './Search';
 
+
+
 const TasksList = props => {
   const initialFormState = {
     title: '',
@@ -42,7 +44,7 @@ const TasksList = props => {
   // delete task
   const removeTask = id => {
     axios.delete('/api/v1/tasks/' + id)
-      .then(response => {
+      .then(res => {
         setTasks(tasks.filter(task => task.id !== id))
       })
       .catch(error => console.log(error))
@@ -87,7 +89,7 @@ const TasksList = props => {
   const filterTasks = (param, value) => {
     axios.get('/api/v1/tasks/')
       .then(response => {
-        setTasks(tasks.filter(task => task[param] === value)) 
+        setTasks(response.data.filter(task => task[param] === value)) 
       })
       .catch(error => console.log(error))
   };
@@ -106,6 +108,7 @@ const TasksList = props => {
         title: x.title,
         category: x.category}})
     .then(res => {
+      console.log(res.data)
       setTasks(res.data) 
     })
       .catch(error => console.log(error))
@@ -116,8 +119,7 @@ const TasksList = props => {
   return (
     <div>
       <hr />
-      <div className="tasks-list">
-        <div>
+        <div className= "task-form">
           {editing ? (
             <EditTaskForm
               setEditing={setEditing}
@@ -129,7 +131,7 @@ const TasksList = props => {
             )}
 
         </div>
-
+        <div className="tasks-list">
         <hr />
         <ShowAllTasks showAll={showAll} />
         <br/>

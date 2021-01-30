@@ -1,13 +1,20 @@
 import React from 'react';
+import { Router, Link } from "@reach/router"
+import TaskDisplay from './TaskDisplay';
+
 
 const Task = ({ task, removeTask, editTask, editing }) => {
-
+    // <Router>
+    //             <TaskDisplay path="tasks/:id" task={task} />
+    //         </Router>
     return (
         <div className="task" key={task.id}>
-            <span>
-            {task.title}  |  {task.category}  |  {task.importance}  |
+            
+            <Link to={`tasks/${task.id}`} testword="something to print now">
+                <span>
+                    {task.title}  |  {task.category}  |  {task.importance}  |
             </span>
-
+            </Link>
             {editing ? (null
             ) : (
                     <button

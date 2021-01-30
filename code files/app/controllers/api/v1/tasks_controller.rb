@@ -51,9 +51,9 @@ module Api::V1
       # if params[:title].blank?  
       #   # redirect_to(api_v1_tasks_path, alert: "Empty field!") and return  
       # else  
-        # logger.debug params
-      @search = params[:title].downcase 
-      @tags = params[:category].downcase
+        logger.debug params
+      @search = params[:title] == nil ? '' : params[:title].downcase
+      @tags = params[:category] == nil ? '' : params[:category].downcase
       @results = Task.all.where("(lower(title) LIKE :search OR lower(description) LIKE :search) AND lower(category) LIKE :tags", {search: "%#{@search}%", tags: "%#{@tags}%"}) 
 
       render json: @results
