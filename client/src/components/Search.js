@@ -1,7 +1,11 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 // props: searchTasks
-const Search = ( props ) => {
+const Search = (props) => {
     const [search, setSearch] = useState({});
 
     const handleInputChange = event => {
@@ -10,21 +14,37 @@ const Search = ( props ) => {
     };
 
     return (
-        <form onSubmit={event => {
+        <Form onSubmit={event => {
             event.preventDefault()
             // if (!search.title) return;
             props.searchTasks(search)
-          }}>
+        }}>
 
             <div>
-                <label>Title: </label>
-                <input type="text" name="title" value={search.title} onChange={handleInputChange} ></input>
-                <label>Category: </label>
-                <input type="text" name="category" value={search.category} onChange={handleInputChange} ></input>
-            <button
-            > Search! </button>
+                <Form.Group>
+                    <Form.Row>
+                        <Col>
+                            <Form.Label>Title: </Form.Label>
+                        </Col>
+                        <Col>
+                            <Form.Control name="title" value={search.title} onChange={handleInputChange} />
+                        </Col>
+                        <Col>
+                            <Form.Label>Category</Form.Label>
+                        </Col>
+                        <Col>
+                            <Form.Control name="category" value={search.category} onChange={handleInputChange} />
+                        </Col>
+                        <Col>
+                            <Button variant="info" type="submit"
+                            > Search! </Button>
+                        </Col>
+                    </Form.Row>
+                </Form.Group>
+
+
             </div>
-        </form>
+        </Form>
     )
 }
 

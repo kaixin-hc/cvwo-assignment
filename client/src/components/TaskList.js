@@ -7,7 +7,9 @@ import TaskFilter from './TaskFilter';
 import ShowAllTasks from './ShowAllTasks';
 import Search from './Search';
 
-
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const TasksList = props => {
   const initialFormState = {
@@ -19,8 +21,8 @@ const TasksList = props => {
 
   useEffect(() => {
     axios.get('/api/v1/tasks')
-        .then(res => setTasks(res.data) )
-      }, []);
+      .then(res => setTasks(res.data))
+  }, []);
 
   // create task
   const addTask = task => {
@@ -89,15 +91,15 @@ const TasksList = props => {
   const filterTasks = (param, value) => {
     axios.get('/api/v1/tasks/')
       .then(response => {
-        setTasks(response.data.filter(task => task[param] === value)) 
+        setTasks(response.data.filter(task => task[param] === value))
       })
       .catch(error => console.log(error))
   };
-  
+
   const showAll = () => {
     axios.get('/api/v1/tasks/')
       .then(res => {
-        setTasks(res.data) 
+        setTasks(res.data)
       })
       .catch(error => console.log(error))
   };
@@ -106,48 +108,62 @@ const TasksList = props => {
     axios.get('/api/v1/search/', {
       params: {
         title: x.title,
-        category: x.category}})
-    .then(res => {
-      console.log(res.data)
-      setTasks(res.data) 
+        category: x.category
+      }
     })
+      .then(res => {
+        console.log(res.data)
+        setTasks(res.data)
+      })
       .catch(error => console.log(error))
   };
 
   const [tasks, setTasks] = useState([]);
 
   return (
+
     <div>
-      <hr />
-        <div className= "task-form">
-          {editing ? (
-            <EditTaskForm
-              setEditing={setEditing}
-              currentTask={currentTask}
-              updateTask={updateTask}
-            />
-          ) : (
-              <NewTaskForm addTask={addTask} initialFormState={initialFormState} />
-            )}
+      
+      <Container>
+        <Row>
+          <Col xs={{ order: 12 }} xs={3}>
+            <div className="task-form">
+              {editing ? <h3> Edit Task</h3> : <h3>New Task</h3>}
+              <hr/>
+              {editing ? (
+                <EditTaskForm
+                  setEditing={setEditing}
+                  currentTask={currentTask}
+                  updateTask={updateTask}
+                />
+              ) : (
+                  <NewTaskForm addTask={addTask} initialFormState={initialFormState} />
+                )}
 
-        </div>
-        <div className="tasks-list">
-        <hr />
-        <ShowAllTasks showAll={showAll} />
-        <br/>
-        <TaskFilter filterTasks={filterTasks} param="importance" value="Important"/>
-        <TaskFilter filterTasks={filterTasks} param="importance" value="Important & Urgent"/>
-        <TaskFilter filterTasks={filterTasks} param="importance" value="Urgent"/>
-        <TaskFilter filterTasks={filterTasks} param="importance" value="OTOT"/>
-        <br />
-        <br />
-        <Search searchTasks={searchTasks} />
-        <br/>
+            </div>
+          </Col>
 
-        {tasks.map((task, __) => (
-          <Task task={task} removeTask={removeTask} editTask={editTask} editing={editing} />
-        ))}
-      </div>
+          <Col xs={3} xs={{order:1}}>
+            <div className="tasks-list">
+              <div>
+              <Search searchTasks={searchTasks} />
+              
+              <TaskFilter filterTasks={filterTasks} param="importance" value="Important" />
+              <TaskFilter filterTasks={filterTasks} param="importance" value="Important & Urgent" />
+              <TaskFilter filterTasks={filterTasks} param="importance" value="Urgent" />
+              <TaskFilter filterTasks={filterTasks} param="importance" value="OTOT" />
+              <ShowAllTasks showAll={showAll} />
+              </div>
+              <br />
+              
+              <br />
+              {tasks.map((task, __) => (
+                <Task task={task} removeTask={removeTask} editTask={editTask} editing={editing} />
+              ))}
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   )
 };

@@ -1,11 +1,16 @@
 import React from 'react';
+import Badge from 'react-bootstrap/Badge'
 
-const TaskFilter = ({filterTasks, param, value }) => {
+const TaskFilter = ({ filterTasks, param, value }) => {
 
     return (
-        <button
-            onClick={() => { filterTasks(param, value) }}
-        > {param}: {value}</button>
+        <span>
+            {' '}
+            <Badge pill variant="warning" onClick={() => { filterTasks(param, value) }}>
+                {value}
+            </Badge>
+            {' '}
+        </span>
     )
 }
 

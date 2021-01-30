@@ -1,30 +1,39 @@
 import React from 'react';
-import { Router, Link } from "@reach/router"
-import TaskDisplay from './TaskDisplay';
-
+import { Link } from "@reach/router"
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const Task = ({ task, removeTask, editTask, editing }) => {
     // <Router>
     //             <TaskDisplay path="tasks/:id" task={task} />
     //         </Router>
     return (
-        <div className="task" key={task.id}>
-            
+        <p className="task" key={task.id}>
+            <Container>
+                <Row>
+                    <Col xs={12} md={8}>
             <Link to={`tasks/${task.id}`} testword="something to print now">
-                <span>
-                    {task.title}  |  {task.category}  |  {task.importance}  |
-            </span>
+                <Container>
+                    <Row>
+                    <Col xs={4}>{task.title} </Col> <Col xs={3}>{task.category}</Col> <Col xs={5}>{task.importance} </Col>   
+                    </Row>
+            </Container>
             </Link>
+            </Col>
+            <Col xs={4} md={3}>
             {editing ? (null
             ) : (
-                    <button
+                    <Button size="sm" variant="outline-primary"
                         onClick={() => { editTask(task) }}
-                    >Edit</button>
+                    >Edit</Button>
                 )}
-
-            <button onClick={() => removeTask(task.id)}>Remove</button>
-
-        </div>
+            {"    "} 
+            <Button size="sm" variant="outline-danger" onClick={() => removeTask(task.id)}>Remove</Button>
+            </Col>
+            </Row> </Container>
+        </p>
     );
 }
 

@@ -1,11 +1,16 @@
 import React from 'react';
-
-const ShowAllTasks = ({showAll}) => {
+import Badge from 'react-bootstrap/Badge'
+const ShowAllTasks = ({ showAll }) => {
 
     return (
-        <button
-            onClick={() => { showAll() }}
-        > Show All Tasks </button>
+        <span>
+            {' '}
+            <Badge pill variant="info" onClick={() => { showAll() }}>
+                Show All Tasks
+            </Badge>
+            {' '}
+        </span>
+
     )
 }
 
