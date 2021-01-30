@@ -5,6 +5,7 @@ import EditTaskForm from './EditTaskForm'
 import Task from './Task';
 import TaskFilter from './TaskFilter';
 import ShowAllTasks from './ShowAllTasks';
+import Search from './Search';
 
 const TasksList = props => {
   const initialFormState = {
@@ -16,8 +17,8 @@ const TasksList = props => {
 
   useEffect(() => {
     axios.get('/api/v1/tasks')
-      .then(res => setTasks(res.data))
-  }, [])
+        .then(res => setTasks(res.data) )
+      }, []);
 
   // create task
   const addTask = task => {
@@ -86,7 +87,7 @@ const TasksList = props => {
   const filterTasks = (param, value) => {
     axios.get('/api/v1/tasks/')
       .then(response => {
-        setTasks(tasks.filter(task => task[param] == value)) 
+        setTasks(tasks.filter(task => task[param] === value)) 
       })
       .catch(error => console.log(error))
   };
@@ -96,6 +97,17 @@ const TasksList = props => {
       .then(res => {
         setTasks(res.data) 
       })
+      .catch(error => console.log(error))
+  };
+
+  const searchTasks = (x) => {
+    axios.get('/api/v1/search/', {
+      params: {
+        title: x.title,
+        category: x.category}})
+    .then(res => {
+      setTasks(res.data) 
+    })
       .catch(error => console.log(error))
   };
 
@@ -124,6 +136,12 @@ const TasksList = props => {
         <TaskFilter filterTasks={filterTasks} param="importance" value="Important"/>
         <TaskFilter filterTasks={filterTasks} param="importance" value="Important & Urgent"/>
         <TaskFilter filterTasks={filterTasks} param="importance" value="Urgent"/>
+        <TaskFilter filterTasks={filterTasks} param="importance" value="OTOT"/>
+        <br />
+        <br />
+        <Search searchTasks={searchTasks} />
+        <br/>
+
         {tasks.map((task, __) => (
           <Task task={task} removeTask={removeTask} editTask={editTask} editing={editing} />
         ))}

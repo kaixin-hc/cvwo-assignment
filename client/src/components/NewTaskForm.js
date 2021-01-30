@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// props passed is the addTask function and the initial form state
 
 const NewTaskForm = props => {
   const [task, setTask] = useState(props.initialFormState);

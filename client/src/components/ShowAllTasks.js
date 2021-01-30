@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShowAllTasks = (showAll) => {
+const ShowAllTasks = ({showAll}) => {
 
     return (
         <button
