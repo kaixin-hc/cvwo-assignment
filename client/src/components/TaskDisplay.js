@@ -20,8 +20,16 @@ const TaskDisplay = ({id}, props) => {
             <span>
                {task.category} {" | "}{task.importance} 
             </span>
+            {/* <br/>
+            <span>
+            {"Created at | "}{task.created_at}
+            <br/>
+               {"Updated at | "}{task.updated_at} 
+            </span> */}
             <br/><br/>
             {task.description}
+
+
             {/* {editing ? (null
             ) : (
                     <button

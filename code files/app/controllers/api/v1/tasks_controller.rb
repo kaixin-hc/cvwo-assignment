@@ -2,7 +2,7 @@ module Api::V1
   class TasksController < ApplicationController
 
     def index
-      @tasks = Task.all
+      @tasks = Task.all.order(created_at: :desc)
       render json: @tasks
     end
 

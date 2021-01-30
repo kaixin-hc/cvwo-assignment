@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Todos</h1>
+      <h1>Get Things Done</h1>
       <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="/">
       Task List

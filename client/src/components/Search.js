@@ -24,7 +24,7 @@ const Search = (props) => {
                 <Form.Group>
                     <Form.Row>
                         <Col>
-                            <Form.Label>Title: </Form.Label>
+                            <Form.Label>Subject: </Form.Label>
                         </Col>
                         <Col>
                             <Form.Control name="title" value={search.title} onChange={handleInputChange} />
